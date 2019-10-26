@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: gateway
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: HT123asd
+    url: jdbc:mysql://119.23.52.13:3306/SpringCloud_Sell?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+  jpa:
+    show-sql: true
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    base-url: http://119.23.52.13:9411/
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ReadTimeout: 1000000
+  ConnectTimeout: 1000000
+server:
+  port: 8888

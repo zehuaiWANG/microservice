@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: service2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: HT123asd
+    url: jdbc:mysql://119.23.52.13:3306/SpringCloud_Sell?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8082
